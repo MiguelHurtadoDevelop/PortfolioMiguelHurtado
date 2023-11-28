@@ -500,7 +500,18 @@ main section {
         #menuHamburguesa {
             display: none; /* Hide the hamburger menu by default */
         }
-        
+        .imagenTestimonio {
+            width: 30%;
+            height: 20%;
+        }
+
+        #sobre-mi{
+            flex-direction: column;
+            align-items: center;
+        }
+        .contenidoSobreMi{
+            width: 80%;
+        }
     
        
     
