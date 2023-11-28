@@ -1,126 +1,187 @@
-       
-       
-       /* Estilos generales y reset de estilos */
-       body, html {
-        margin: 0;
-        padding: 0;
-        font-family: 'Arial', sans-serif;
+:root {
+    --background-color: rgb(212, 206, 206);
+    --nav-color: #333;
+    --text-color: white;
+    --accent-color: rgb(253, 13, 13);
+    --box-shadow-color: black;
+}
+
+/* Estilos generales y reset de estilos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    font-size: 1.1rem;
+}
+h2{
+    color: var(--nav-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 2.5rem;
+
+
+}
+
+/* Menú de Navegación */
+nav {
+    background-color: var(--nav-color);
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+}
+nav.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    width: 30%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 1.5vh 0 1.5vh;
+    padding: 1vh;
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.nombreInicio {
+    color: var(--text-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.fotoInicio {
+    width: 9%;
+    height: 18%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 45%;
+    top: 75%;
+    border: 1vh solid var(--nav-color);
+    box-shadow: 0 0 0.5vh var(--box-shadow-color);
+}
+
+.fotoInicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sección Hero */
+#hero {
+    background-image: url('images/hero.jpg');
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    color: var(--text-color);
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#hero a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 10vh;
+}
+
+main section {
+    margin-bottom: 10vh;
+}
+
+    /* Sección Sobre Mí */
+    #sobre-mi {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10vh;
+        width: 100%;
     }
     
-    /* Menú de Navegación */
-    nav {
-        background-color: #333;
+    .contenidoSobreMi {
+        width: 50%;
+        text-align: center;
+        background-color: white;
+        border: 0.2vh solid #333;
+        border-radius: 2vh;
         
-        width: 100%;
-        z-index: 1;
-        display: flex;
-        justify-content: space-around;
     }
-    nav.fixed {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-    nav ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-around;
-        padding: 1%;
+
+    .imagenSobreMi{
         width: 30%;
         
     }
-    
-    
-    nav a {
-        
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        margin: 0 1.5vh 0 1.5vh;
-        padding: 1vh;
-    }
-    
-    nav a:hover {
-        border-bottom: 2px solid rgb(177, 0, 0);
-        
-    }
-    .nombreInicio{
-        color: white;
-        font-weight: bold;
-        text-align: center;
-    }
-    .fotoInicio{
-        width: 9%;
-        height: 18%;
-        border-radius: 50%;
-        overflow: hidden;
-        position: absolute;
-        left: 45%;
-        top: 75%;
-        border: 1vh solid #333;
-        box-shadow: 0 0 0.5vh black;
-        
-    }
-    .fotoInicio img{
+    .imagenSobreMi img{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        
     }
     
-    /* Sección Hero */
-    #hero {
-        background-image: url('images/hero.jpg');
-        background-color: black;
-        background-position: center;
-        background-size: cover;
-        color: white;
-        text-align: center;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 200%;
-    }
+
+
+
     
-    
-    #hero h1 {
-        font-size: 2.5em;
-        margin-bottom: 10px;
-    }
-    
-    #hero p {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-    }
-    
-    #hero a {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-    
-    main{
-        margin-top: 10vh;
-       
-    }
-    main section{
-       margin-bottom: 10vh;
-    }
     /* Sección Mi Trabajo */
-    #mi-trabajo {
+    #MisProyectos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10vh;
+    }
+    .contenedorProyectos {
         display: flex;
         flex-wrap: wrap;
-        gap: 6vh;
+        gap: 10vh;
         justify-content: space-around;
-        margin: 5vh ;
+        
     }
 
     .proyectos{   
         position:relative;
-        flex: 1 0 35rem;
+        width: 50vh;
+        
+        border: 0.2vh solid #333;
+
      
     }
     .textoProyecto{
@@ -128,7 +189,7 @@
         position: absolute;
         top: 90%;
         background-color: rgb(253, 13, 13);
-        opacity: 50%;
+        opacity: 70%;
         color: white;
         width: 100%;
         font-size: 110%;
@@ -149,8 +210,9 @@
         transition: all 0.5s;
     }
     .imagenProyecto img{
-        width: inherit;
-        height: inherit;
+        width: 100%;
+        height: 100%;
+
         object-fit: cover;
     }
     
@@ -162,67 +224,48 @@
     
     
     
-    /* Sección Sobre Mí */
-    #sobre-mi {
-        text-align: center;
-        padding: 50px;
-    }
     
-    #sobre-mi img {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-    }
-    
-    #sobre-mi h2 {
-        margin-top: 20px;
-    }
     
     /* Sección Servicios */
     #servicios {
         text-align: center;
-        margin: 25vh;
+        margin: 10vh;
     }
-    .boxServicios{
+    
+    .boxServicios {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        
-        
     }
     
     .servicio {
         display: flex;
         flex-direction: column;
-
-        justify-content:space-around;
+        justify-content: space-around;
         align-items: center;
         width: 20rem;
         height: 30rem;
-        background-color: thistle;
+        background-color:white;
         padding: 2rem;
         margin: 2rem;
-        
-    
     }
-    .servicio img{
+    
+    .servicio img {
         width: 10vh;
         height: 10vh;
-        
-        
     }
-    .servicio:hover{
+    
+    .servicio:hover {
         transform: scale(1.1);
         transition: 0.5s;
-        border: 0.1vh solid #333;
+        border: 0.1vh solid var(--nav-color);
         border-radius: 2vh;
     }
-   
-    #habilidades{
+    
+    #habilidades {
         text-align: center;
         width: 90%;
-        border: 0.5vh solid #333;
+        
         margin: 0 auto;
         padding: 2vh;
         
@@ -232,6 +275,9 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        background-color: white;
+        border: 0.3vh solid var(--nav-color);
+        
         
     }
     .boxHabilidad{
@@ -275,99 +321,182 @@
     
     /* Sección Testimonios */
     #testimonios {
+        margin-top: 10vh;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        
+        flex-direction: column;
+        align-items: center;
     }
     
-    .testimonio {
-        text-align: center;
-        padding: 20px;
-        margin: 10px;
+    .testimonio{
+        width: 60%;
+        margin: 2vh;
+        padding: 2vh;
+        border: 0.2vh solid #333;
+        border-radius: 2vh;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
-    
-    .testimonio img {
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
+    .imagenTestimonio{
+        width: 30vh;
+        height: 20vh;
+        border-radius: 6vh;
+        overflow: hidden;
+        border: 0.2vh solid #333;
+        box-shadow: 0 0 0.5vh black;
+    }
+    .imagenTestimonio img{
+        width: 100%;
+        height: 100%;
         object-fit: cover;
+       
     }
-    
-    /* Sección Contacto */
-    #contacto {
+    .textoTestimonio{
+        width: 60%;
         text-align: center;
-        padding: 50px;
+
+    }
+
+    #contacto{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+    .formContacto {
+        width: 50%;
+        margin: 2vh;
+        padding: 2vh;
+        border-radius: 5vh;
+        background-color: var(--accent-color);
+        border: 0.3vh solid var(--nav-color);
+    }
+
+    .formContacto form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .formContacto form input {
+        width: 80%;
+        margin: 1vh;
+        padding: 1vh;
+        border-radius: 2vh;
+        border: 0.2vh solid var(--nav-color);
     }
     
-    form {
-        max-width: 400px;
-        margin: 0 auto;
+    .formContacto form textarea {
+        width: 80%;
+        margin: 1vh;
+        padding: 1vh;
+        border-radius: 2vh;
+        border: 0.2vh solid var(--nav-color);
     }
     
-    button {
-        background-color: #4CAF50;
+    .formContacto form button {
+        width: 30%;
+        margin: 1vh;
+        padding: 1vh;
+        border-radius: 2vh;
+        border: 0.2vh solid var(--nav-color);
+        background-color: white;
+        color: var(--accent-color);
+        font-weight: bold;
+    }
+    
+    .formContacto form button:hover {
+        background-color: var(--nav-color);
         color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+        transition: 0.5s;
+    }
+    .socialMediaContacto{
+        display:flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+    .socialMediaContacto img{
+        width: 7vh;
+        height: 7vh;
+       
+    }
+    footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--nav-color);
+        color: var(--text-color);
+        height: 10vh;
     }
     
-    /* Sección Redes Sociales */
-    #redes-sociales {
-        text-align: center;
-        padding: 20px;
+    #menuHamburguesa {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--nav-color); /* Use your navigation color variable here */
+        z-index: 2;
     }
     
-    #redes-sociales a {
+    #menuHamburguesa ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    #menuHamburguesa li {
+        margin: 20px 0;
+    }
+    
+    #menuHamburguesa a {
+        text-decoration: none;
+        color: var(--text-color); /* Use your text color variable here */
         font-size: 1.5em;
-        margin: 0 10px;
-        color: #333;
     }
     
-    /* Para dispositivos con pantalla pequeña */
-@media only screen and (max-width: 600px) {
-    .boxServicios, .boxHabilidades {
-      flex-direction: column;
+    .hamburger {
+        display: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        z-index: 2; 
     }
-  }
-  
-  /* Para dispositivos con pantalla mediana */
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .boxServicios, .boxHabilidades {
-      flex-direction: row;
-    }
-  }
-  
-  /* Para dispositivos con pantalla grande */
-  @media only screen and (min-width: 1025px) {
-    .boxServicios, .boxHabilidades {
-      flex-direction: row;
-    }/* Media Queries para dispositivos móviles */
+
+   
     @media (max-width: 600px) {
-        #hero {
-            padding: 50px;
+        body{
+            font-size: 0.6rem;
+        }
+        #menu {
+            display: none; /* Hide the regular menu on smaller screens */
         }
     
-        #mi-trabajo img {
-            max-width: 100%;
+        .hamburger {
+            display: block; /* Show the hamburger button on smaller screens */
         }
     
-        #sobre-mi {
-            padding: 30px;
+        #menuHamburguesa {
+            display: none; /* Hide the hamburger menu by default */
         }
-    
-        #habilidades {
-            padding: 30px;
-        }
-    
-        #testimonios {
-            padding: 30px;
-        }
-    
-        #contacto {
-            padding: 30px;
-        }
+
     }
-}
+    
+
+    
+  

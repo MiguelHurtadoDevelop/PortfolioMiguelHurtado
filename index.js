@@ -20,5 +20,10 @@ window.onload = function() {
         }
     });
 
-    
+    function toggleMenu() {
+        var menu = document.getElementById("menuHamburguesa");
+        menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+
+   
 }
