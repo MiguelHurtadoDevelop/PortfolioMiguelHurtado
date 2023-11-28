@@ -20,25 +20,5 @@ window.onload = function() {
         }
     });
 
-    var habilidades = document.querySelector('#habilidades');
-    var position = habilidades.getBoundingClientRect().top;
-
-    var llenarBarras = function() {
-        var barras = document.querySelectorAll('.barra-progreso');
-        barras.forEach(function(barra) {
-            barra.style.width = barra.getAttribute('data-width');
-            barra.classList.add('llenar');
-        });
-    };
-
-    if (window.pageYOffset >= position) {
-        llenarBarras();
-    }
-
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset >= position) {
-            llenarBarras();
-            console.log('hola');
-        }
-    });
+    
 }

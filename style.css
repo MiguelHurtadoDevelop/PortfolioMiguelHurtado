@@ -104,6 +104,10 @@
     
     main{
         margin-top: 10vh;
+       
+    }
+    main section{
+       margin-bottom: 10vh;
     }
     /* Sección Mi Trabajo */
     #mi-trabajo {
@@ -177,42 +181,96 @@
     
     /* Sección Servicios */
     #servicios {
+        text-align: center;
+        margin: 25vh;
+    }
+    .boxServicios{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding: 50px;
+        
+        
     }
     
     .servicio {
-        text-align: center;
-        width: 30%;
+        display: flex;
+        flex-direction: column;
+
+        justify-content:space-around;
+        align-items: center;
+        width: 20rem;
+        height: 30rem;
+        background-color: thistle;
+        padding: 2rem;
+        margin: 2rem;
+        
     
+    }
+    .servicio img{
+        width: 10vh;
+        height: 10vh;
+        
+        
     }
     .servicio:hover{
         transform: scale(1.1);
-        transition: 0.3s;
+        transition: 0.5s;
         border: 0.1vh solid #333;
+        border-radius: 2vh;
     }
    
-    /* Sección Habilidades */
-    #habilidades {
+    #habilidades{
         text-align: center;
-        padding: 50px;
+        width: 90%;
+        border: 0.5vh solid #333;
+        margin: 0 auto;
+        padding: 2vh;
+        
     }
-    
-    
-    .barra-progreso {
-        width: 0;
-        transition: width 2s ease-in-out;
+    /* Sección Habilidades */
+    .boxHabilidades {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
     }
-    
-    .llenar {
-        animation: llenar 2s forwards;
+    .boxHabilidad{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
-    
-    @keyframes llenar {
-        0% { width: 0; }
-        100% { width: 100%; }
+    .habilidad{
+        width: 25%;
+        margin: 1vh;
+    }
+    .barra-progreso{
+       height: 1.5vh;
+        background-color: rgb(253, 13, 13);
+        border-radius: 1vh;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
+    }
+    #skillPhp{
+        width: 60%;
+    }
+    #skillJava{
+        width: 95%;
+    }
+    #skillSql{
+        width: 80%;
+    }
+    #skillHtml{
+        width: 80%;
+    }
+    #skillJs{
+        width: 90%;
+    }
+    #skillCss{
+        width: 90%;
     }
     
     /* Sección Testimonios */
@@ -220,7 +278,7 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding: 50px;
+        
     }
     
     .testimonio {
@@ -268,7 +326,25 @@
         color: #333;
     }
     
-    /* Media Queries para dispositivos móviles */
+    /* Para dispositivos con pantalla pequeña */
+@media only screen and (max-width: 600px) {
+    .boxServicios, .boxHabilidades {
+      flex-direction: column;
+    }
+  }
+  
+  /* Para dispositivos con pantalla mediana */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .boxServicios, .boxHabilidades {
+      flex-direction: row;
+    }
+  }
+  
+  /* Para dispositivos con pantalla grande */
+  @media only screen and (min-width: 1025px) {
+    .boxServicios, .boxHabilidades {
+      flex-direction: row;
+    }/* Media Queries para dispositivos móviles */
     @media (max-width: 600px) {
         #hero {
             padding: 50px;
@@ -294,4 +370,4 @@
             padding: 30px;
         }
     }
-   
+}
