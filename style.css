@@ -23,19 +23,19 @@ h2{
 }
 
 /* Menú de Navegación */
-nav {
+#menu {
     background-color: var(--nav-color);
     width: 100%;
     z-index: 1;
     display: flex;
     justify-content: space-around;
 }
-nav.fixed {
+#menu.fixed {
     position: fixed;
     top: 0;
     width: 100%;
 }
-nav ul {
+#menu ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -43,12 +43,12 @@ nav ul {
     width: 30%;
 }
 
-nav a {
+#menu a {
     text-decoration: none;
     color: var(--text-color);
 }
 
-nav a {
+#menu a {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -56,7 +56,7 @@ nav a {
     padding: 1vh;
 }
 
-nav a:hover {
+#menu a:hover {
     border-bottom: 2px solid var(--accent-color);
 }
 
@@ -146,7 +146,7 @@ main section {
     }
 
     .imagenSobreMi{
-        width: 30%;
+        width: 25%;
         
     }
     .imagenSobreMi img{
@@ -169,6 +169,7 @@ main section {
         margin: 10vh;
     }
     .contenedorProyectos {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 10vh;
@@ -243,8 +244,8 @@ main section {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        width: 20rem;
-        height: 30rem;
+        width: 20vh;
+        height: 30%;
         background-color:white;
         padding: 2rem;
         margin: 2rem;
@@ -436,6 +437,8 @@ main section {
         height: 10vh;
     }
     
+    
+    
     #menuHamburguesa {
         display: none;
         flex-direction: column;
@@ -445,7 +448,7 @@ main section {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--nav-color); /* Use your navigation color variable here */
+        background-color: var(--nav-color);
         z-index: 2;
     }
     
@@ -467,11 +470,14 @@ main section {
     
     #menuHamburguesa a {
         text-decoration: none;
-        color: var(--text-color); /* Use your text color variable here */
+        color: var(--text-color);
         font-size: 1.5em;
     }
     
     .hamburger {
+        position: fixed;
+        top: 2vh;
+        right: 2vh;
         display: none;
         font-size: 1.5em;
         cursor: pointer;
@@ -481,7 +487,7 @@ main section {
    
     @media (max-width: 600px) {
         body{
-            font-size: 0.6rem;
+            font-size: 0.8rem;
         }
         #menu {
             display: none; /* Hide the regular menu on smaller screens */
@@ -494,6 +500,11 @@ main section {
         #menuHamburguesa {
             display: none; /* Hide the hamburger menu by default */
         }
+        
+    
+       
+    
+       
 
     }
     

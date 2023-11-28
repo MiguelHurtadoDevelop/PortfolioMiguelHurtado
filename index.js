@@ -20,10 +20,19 @@ window.onload = function() {
         }
     });
 
+    document.querySelector('.hamburger').addEventListener('click', toggleMenu);
     function toggleMenu() {
-        var menu = document.getElementById("menuHamburguesa");
-        menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+        var menu = document.querySelector('#menuHamburguesa');
+        if (menu.style.display === 'none') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
     }
+
+    document.querySelectorAll('#menuHamburguesa a').forEach(function(link) {
+        link.addEventListener('click', toggleMenu);
+    });
 
    
 }
