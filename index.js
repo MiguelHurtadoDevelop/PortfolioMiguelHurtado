@@ -20,7 +20,7 @@ window.onload = function() {
         }
     });
 
-    document.querySelector('.hamburger').addEventListener('hover', toggleMenu);
+    document.querySelector('.hamburger').addEventListener('click', toggleMenu);
     function toggleMenu() {
         var menu = document.querySelector('#menuHamburguesa');
         if (menu.style.display === 'none') {
@@ -31,7 +31,7 @@ window.onload = function() {
     }
 
     document.querySelectorAll('#menuHamburguesa a').forEach(function(link) {
-        link.addEventListener('hover', toggleMenu);
+        link.addEventListener('click', toggleMenu);
     });
 
    
