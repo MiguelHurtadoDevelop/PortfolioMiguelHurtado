@@ -1,3 +1,4 @@
+/* Variables de colores */
 :root {
     --background-color: rgb(212, 206, 206);
     --nav-color: #333;
@@ -10,7 +11,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     font-size: 1.1rem;
 }
@@ -142,6 +143,7 @@ main section {
         background-color: white;
         border: 0.2vh solid #333;
         border-radius: 2vh;
+        padding: 3vh;
         
     }
 
@@ -244,8 +246,8 @@ main section {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        width: 20vh;
-        height: 30%;
+        width: 25vh;
+        height: 40vh;
         background-color:white;
         padding: 2rem;
         margin: 2rem;
@@ -361,6 +363,8 @@ main section {
 
     }
 
+    /* Sección Contacto */
+
     #contacto{
         display: flex;
         justify-content: space-around;
@@ -428,6 +432,8 @@ main section {
         height: 7vh;
        
     }
+
+    /* Footer */
     footer{
         display: flex;
         justify-content: space-around;
@@ -439,6 +445,7 @@ main section {
     
     
     
+    /* Menú Hamburguesa */
     #menuHamburguesa {
         display: none;
         flex-direction: column;
@@ -465,7 +472,7 @@ main section {
     }
     
     #menuHamburguesa li {
-        margin: 20px 0;
+        margin: 1vh;
     }
     
     #menuHamburguesa a {
@@ -484,21 +491,23 @@ main section {
         z-index: 3; 
     }
 
+
+    /* Media Queries */
    
     @media (max-width: 600px) {
         body{
             font-size: 0.8rem;
         }
         #menu {
-            display: none; /* Hide the regular menu on smaller screens */
+            display: none;
         }
     
         .hamburger {
-            display: block; /* Show the hamburger button on smaller screens */
+            display: block;
         }
     
         #menuHamburguesa {
-            display: none; /* Hide the hamburger menu by default */
+            display: none; 
         }
         .imagenTestimonio {
             width: 30%;
@@ -513,11 +522,23 @@ main section {
             width: 80%;
         }
     
-       
-    
-       
 
     }
+
+    @media (max-width: 1450px) {
+            .fotoInicio{
+               display: none;
+            }
+            .nombreInicio{
+                display: block;
+                background-color: white;
+                color: var(--nav-color);
+            }
+            #menu ul{
+                width: 50%;
+            }
+    }
+
     
 
     
